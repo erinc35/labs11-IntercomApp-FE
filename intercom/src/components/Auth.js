@@ -14,7 +14,7 @@ class Auth {
             domain: 'dev-6iblqc4g.auth0.com',
             audience: 'https://dev-6iblqc4g.auth0.com/userinfo',
             clientID: 'UoCaR6kp7Fw9utIWr3Wcr8qsFQPT1m8M',
-            redirectUri: `https://musing-lamarr-22a2b1.netlify.com/callback`,
+            redirectUri: 'https://musing-lamarr-22a2b1.netlify.com/callback',
             responseType: 'id_token token',
             scope: 'openid email profile'
         }, { auth: { redirect: false } });
@@ -56,7 +56,7 @@ class Auth {
                 this.profile = authResult.idTokenPayload;
                 // set the time that the id token will expire at
                 this.expiresAt = authResult.idTokenPayload.exp * 1000;
-
+                console.log(authResult)
                 // assign gathered values to localStorage for persistence in the application
                 localStorage.setItem('jwt', authResult.idToken);
                 localStorage.setItem('email', authResult.idTokenPayload.email);

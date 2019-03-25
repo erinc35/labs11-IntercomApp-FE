@@ -15,11 +15,6 @@ class Callback extends Component {
         }
     }
 
-
-    /**
-     * @TODO Make this a nifty loading wheel or progress bar
-     */
-
     render() {
         return (
             <div className='callback-container'>
