@@ -36,6 +36,7 @@ class App extends Component {
   signOut = () => {
     auth0Client.signOut()
   }
+
   render() {
     return (
       <Router>
@@ -45,7 +46,7 @@ class App extends Component {
               <NavLink to="/team">Team Members </NavLink>
               <NavLink to="/users">Users </NavLink>
               {localStorage.getItem('jwt') ? <button onClick={this.signOut}>Sign Out</button> :
-                <button onClick={this.signIn}>Sign In</button>
+                <button onClick={this.signIn}>Sign Inn</button>
               }
             </nav>
           </header>
