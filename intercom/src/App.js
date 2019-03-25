@@ -30,7 +30,7 @@ class App extends Component {
   signIn = (e) => {
     e.preventDefault();
     auth0Client.signIn()
-    // lock.show()
+
   }
 
   signOut = () => {
